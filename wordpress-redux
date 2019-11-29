@@ -1,4 +1,4 @@
-"Redux Section Create": {
+        "Redux Section Create": {
 		"prefix": "reduxsection",
 		"body": [
 			"Redux::setSection( $$opt_name, array(",
