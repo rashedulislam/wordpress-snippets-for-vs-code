@@ -1,1 +1,515 @@
-
+"Redux Section Create": {
+		"prefix": "reduxsection",
+		"body": [
+			"Redux::setSection( $$opt_name, array(",
+			"    'title'            => __( '$1', '${2:textdomain}' ),",
+			"    'id'               => '$3',",
+			"    'subsection'       =>  $4,",
+			"    'customizer_width' => '$5',",
+			"    'desc'             => __( '$6', '${2:textdomain}' ),",
+			"    'icon'             => '$7',",
+			"    'fields'           => array(",
+			"        $8",
+			"    )",
+			") );"
+		],
+		"description": "Redux Section Create"
+	},
+	"Redux Text Input Field": {
+		"prefix": "reduxftext",
+		"body": [
+			"array(",
+			"    'id'           => '$1',",
+			"    'type'         => 'text',",
+			"    'title'        => __('$2', '${3:textdomain}'),",
+			"    'subtitle'     => __('$4', '${3:textdomain}'),",
+			"    'desc'         => __('$5', '${3:textdomain}'),",
+			"    'validate'     => '$6',",
+			"    'msg'          => 'custom error message',",
+			"    'default'      => '$7'",
+			"    'placeholder'  => '$8'",
+			"    'permissions'  => '$9'",
+			")"
+		],
+		"description": "Redux Text Input Field"
+	},
+	"Redux Field Textarea": {
+		"prefix": "reduxftextarea",
+		"body": [
+			"array(",
+			"    'id'           =>'',",
+			"    'type'         => 'textarea',",
+			"    'title'        => __('', ''), ",
+			"    'subtitle'     => __('', ''),",
+			"    'desc'         => __('', ''),",
+			"    'validate'     => 'html_custom',",
+			"    'default'      => '',",
+			"    'allowed_html' => array(",
+			"        'a'      => array(",
+			"            'href' => array(),",
+			"            'title' => array()",
+			"        ),",
+			"        'br'     => array(),",
+			"        'em'     => array(),",
+			"        'strong' => array()",
+			"    )",
+			")"
+		],
+		"description": "Redux Field Textarea"
+	},
+	"Redux Field Media": {
+		"prefix": "reduxfmedia",
+		"body": [
+			"array(",
+			"    'id'       => '',",
+			"    'type'     => 'media', ",
+			"    'url'      => true,",
+			"    'title'    => __('', ''),",
+			"    'desc'     => __('', ''),",
+			"    'subtitle' => __('', ''),",
+			"    'default'  => array(",
+			"        'url'=>''",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Media"
+	},
+	"Redux Field Gallery": {
+		"prefix": "reduxfgalary",
+		"body": [
+			"array(",
+			"    'id'       => '',",
+			"    'type'     => 'gallery',",
+			"    'title'    => __('', ''),",
+			"    'subtitle' => __('', ''),",
+			"    'desc'     => __('', ''),",
+			")"
+		],
+		"description": "Redux Field Gallery"
+	},
+	"Redux Field Editor": {
+		"prefix": "reduxfeditor",
+		"body": [
+			"array(",
+			"    'id'               => '',",
+			"    'type'             => 'editor',",
+			"    'title'            => __('', ''), ",
+			"    'subtitle'         => __('', ''),",
+			"    'default'          => '',",
+			"    'args'             => array(",
+			"        'teeny'            => true,",
+			"        'textarea_rows'    => 10",
+			"    )",
+			")"
+		],
+		"description": "Redux Field Editor"
+	},
+	"Redux Field Date": {
+		"prefix": "reduxfdate",
+		"body": [
+			"array(",
+			"    'id'          => '',",
+			"    'type'        => 'date',",
+			"    'title'       => __('', ''), ",
+			"    'subtitle'    => __('', ''),",
+			"    'desc'        => __('', ''),",
+			"    'placeholder' => 'Click to enter a date'",
+			")"
+		],
+		"description": "Redux Field Date"
+	},
+	"Redux Field Slides": {
+		"prefix": "reduxfslides",
+		"body": [
+			"array(",
+			"    'id'          => '',",
+			"    'type'        => 'slides',",
+			"    'title'       => __('', ''),",
+			"    'subtitle'    => __('', ''),",
+			"    'desc'        => __('', '')",
+			"    'placeholder' => array(",
+			"        'title'       => __('This is a title', ''),",
+			"        'description' => __('Description Here', ''),",
+			"        'url'         => __('Give us a link!', ''),",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Slides"
+	},
+	"Redux Field Slider": {
+		"prefix": "reduxfslider",
+		"body": [
+			"array(",
+			"    'id'        => 'opt-slider-label',",
+			"    'type'      => 'slider',",
+			"    'title'     => __('Slider Example 1', 'redux-framework-demo'),",
+			"    'subtitle'  => __('This slider displays the value as a label.', 'redux-framework-demo'),",
+			"    'desc'      => __('Slider description. Min: 1, max: 500, step: 1, default value: 250', 'redux-framework-demo'),",
+			"    \"default\"   => 250,",
+			"    \"min\"       => 1,",
+			"    \"step\"      => 1,",
+			"    \"max\"       => 500,",
+			"    'display_value' => 'label'",
+			"),",
+			"array(",
+			"    'id' => 'opt-slider-text',",
+			"    'type' => 'slider',",
+			"    'title' => __('Slider Example 2 with Steps (5)', 'redux-framework-demo'),",
+			"    'subtitle' => __('This example displays the value in a text box', 'redux-framework-demo'),",
+			"    'desc' => __('Slider description. Min: 0, max: 300, step: 5, default value: 75', 'redux-framework-demo'),",
+			"    \"default\" => 75,",
+			"    \"min\" => 0,",
+			"    \"step\" => 5,",
+			"    \"max\" => 300,",
+			"    'display_value' => 'text'",
+			"),",
+			" ",
+			"array(",
+			"    'id' => 'opt-slider-select',",
+			"    'type' => 'slider',",
+			"    'title' => __('Slider Example 3 with two sliders', 'redux-framework-demo'),",
+			"    'subtitle' => __('This example displays the values in select boxes', 'redux-framework-demo'),",
+			"    'desc' => __('Slider description. Min: 0, max: 500, step: 5, slider 1 default value: 100, slider 2 default value: 300', 'redux-framework-demo'),",
+			"    \"default\" => array(",
+			"        1 => 100,",
+			"        2 => 300,",
+			"    ),",
+			"    \"min\" => 0,",
+			"    \"step\" => 5,",
+			"    \"max\" => \"500\",",
+			"    'display_value' => 'select',",
+			"    'handles' => 2,",
+			" ",
+			"),",
+			" ",
+			"array(",
+			"    'id' => 'opt-slider-float',",
+			"    'type' => 'slider',",
+			"    'title' => __('Slider Example 4 with float values', 'redux-framework-demo'),",
+			"    'subtitle' => __('This example displays float values', 'redux-framework-demo'),",
+			"    'desc' => __('Slider description. Min: 0, max: 1, step: .1, default value: .5', 'redux-framework-demo'),",
+			"    \"default\" => .5,",
+			"    \"min\" => 0,",
+			"    \"step\" => .1,",
+			"    \"max\" => 1,",
+			"    'resolution' => 0.1,",
+			"    'display_value' => 'text'",
+			")"
+		],
+		"description": "Redux Field Slider"
+	},
+	"Redux Field Select Image": {
+		"prefix": "reduxfsimage",
+		"body": [
+			"array( ",
+			"    'id'       => '',",
+			"    'type'     => 'select_image',",
+			"    'title'    => __('Select Image', ''),",
+			"    'subtitle' => __('', ''),",
+			"    'desc'     => __('', ''),",
+			"    'options'  => Array(",
+			"        Array (",
+			"             'alt'  => 'Image Name 1',",
+			"             'img'  => path_to_img_1,",
+			"        ),",
+			"        Array (",
+			"             'alt'  => 'Image Name 2',",
+			"             'img'  => path_to_img_2,",
+			"        )",
+			"    ),",
+			"    'default'  => path_to_img_1,",
+			")"
+		],
+		"description": "Redux Field Select Image"
+	},
+	"Redux Field Select and Multi Select": {
+		"prefix": "reduxfselect",
+		"body": [
+			"array(",
+			"    'id'       => '',",
+			"    'type'     => 'select',",
+			"    'multi'    => true,",
+			"    'title'    => __('Multi Select Option', ''), ",
+			"    'subtitle' => __('No validation can be done on this field type', ''),",
+			"    'desc'     => __('This is the description field', ''),",
+			"    //Must provide key => value pairs for radio options",
+			"    'options'  => array(",
+			"        '1' => 'Opt 1',",
+			"        '2' => 'Opt 2',",
+			"        '3' => 'Opt 3'),",
+			"    'default'  => array('2','3')",
+			")"
+		],
+		"description": "Redux Field Select and Multi Select"
+	},
+	"Redux Field Section": {
+		"prefix": "reduxfsection",
+		"body": [
+			"array(",
+			"       'id' => 'section-start',",
+			"       'type' => 'section',",
+			"       'title' => __('Indented Options', ''),",
+			"       'subtitle' => __('With the \"section\" field you can create indent option', ''),",
+			"       'indent' => true ",
+			"   ),",
+			"",
+			"// Other field arrays go here.",
+			" ",
+			"array(",
+			"    'id'     => 'section-end',",
+			"    'type'   => 'section',",
+			"    'indent' => false,",
+			")"
+		],
+		"description": "Redux Field Section"
+	},
+	"Redux Field Row": {
+		"prefix": "reduxfrow",
+		"body": [
+			"array( ",
+			"    'id'       => '',",
+			"    'type'     => 'raw',",
+			"    'title'    => __('Raw output', ''),",
+			"    'subtitle' => __('Subtitle text goes here.', ''),",
+			"    'desc'     => __('This is the description field for additional info.', ''),",
+			"    'content'  => file_get_contents(dirname(__FILE__) . '/myfile.txt')",
+			")"
+		],
+		"description": "Redux Field Row"
+	},
+	"Redux Field Radio": {
+		"prefix": "reduxfradio",
+		"body": [
+			"array(",
+			"    'id'       => '',",
+			"    'type'     => 'radio',",
+			"    'title'    => __('', ''), ",
+			"    'subtitle' => __('', ''),",
+			"    'desc'     => __('This is the description field', ''),",
+			"    'options'  => array(",
+			"        '1' => '', ",
+			"        '2' => '', ",
+			"        '3' => ''",
+			"    ),",
+			"    'default' => '2'",
+			");"
+		],
+		"description": "Redux Field Radio"
+	},
+	"Redux Field Password": {
+		"prefix": "reduxfpass",
+		"body": [
+			"array(",
+			"    'id'          => 'opt-password',",
+			"    'type'        => 'password',",
+			"    'username'    => true, //username field show hide",
+			"    'title'       => 'Enter your details:',",
+			"    'placeholder' => array(",
+			"        'username'   => 'Enter your Username',",
+			"        'password'   => 'Enter your Password'",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Password"
+	},
+	"Redux Field MultiText": {
+		"prefix": "reduxfmt",
+		"body": [
+			"array(",
+			"    'id'=>'multi-text',",
+			"    'type' => 'multi_text',",
+			"    'title' => __('', ''),",
+			"    'validate' => 'color',",
+			"    'subtitle' => __('', ''),",
+			"    'desc' => __('This is the description field', '')",
+			")"
+		],
+		"description": "Redux Field MultiText"
+	},
+	"Redux Field Link Color": {
+		"prefix": "reduxflc",
+		"body": [
+			"array(",
+			"    'id'       => 'opt-link-color',",
+			"    'type'     => 'link_color',",
+			"    'title'    => __('', ''),",
+			"    'subtitle' => __('', ''),",
+			"    'desc'     => __('', ''),",
+			"    'default'  => array(",
+			"        'regular'  => '#1e73be', // blue",
+			"        'hover'    => '#dd3333', // red",
+			"        'active'   => '#8224e3',  // purple",
+			"        'visited'  => '#8224e3',  // purple",
+			"    )",
+			")"
+		],
+		"description": "Redux Field Link Color"
+	},
+	"Redux Field Info Normal": {
+		"prefix": "reduxfin",
+		"body": [
+			"array(",
+			"    'id'   => 'info_normal',",
+			"    'type' => 'info',",
+			"    'desc' => __('This is the info field, if you want to break sections up.', '')",
+			")"
+		],
+		"description": "Redux Field Info Normal"
+	},
+	"Redux Field Info Warning": {
+		"prefix": "reduxfiw",
+		"body": [
+			"array(",
+			"    'id'    => 'info_warning',",
+			"    'type'  => 'info',",
+			"    'title' => __('Danger, Will Robinson!', ''),",
+			"    'style' => 'warning',",
+			"    'desc'  => __('This is an info field with the warning style applied and a header.', '')",
+			")"
+		],
+		"description": "Redux Field Info Warning"
+	},
+	"Redux Field Info Success": {
+		"prefix": "reduxfis",
+		"body": [
+			"array(",
+			"    'id'    => 'info_success',",
+			"    'type'  => 'info',",
+			"    'style' => 'success',",
+			"    'title' => __('Success!', ''),",
+			"    'icon'  => 'el el-ok-sign',",
+			"    'desc'  => __( 'This is an info field with the success style applied', '')",
+			")"
+		],
+		"description": "Redux Field Info Success"
+	},
+	"Redux Field Info Critical": {
+		"prefix": "reduxfic",
+		"body": [
+			"array(",
+			"    'id' => 'info_critical',",
+			"    'type' => 'info',",
+			"    'style' => 'critical',",
+			"    'icon' => 'el el-minus-sign',",
+			"    'title' => __('This is a title.', ''),",
+			"    'desc' => __('This is an info field with the critical style applied', '')",
+			")"
+		],
+		"description": "Redux Field Info Critical"
+	},
+	"Redux Field Import Export": {
+		"prefix": "reduxfimport",
+		"body": [
+			"array(",
+			"    array(",
+			"        'id'            => 'opt-import-export',",
+			"        'type'          => 'import_export',",
+			"        'title'         => 'Import Export',",
+			"        'subtitle'      => 'Save and restore your Redux options',",
+			"        'full_width'    => false,",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Import Export"
+	},
+	"Redux Field Image Select Layout": {
+		"prefix": "reduxfisl",
+		"body": [
+			"array(",
+			"    'id'       => 'opt-layout',",
+			"    'type'     => 'image_select',",
+			"    'title'    => __('Main Layout', ''), ",
+			"    'subtitle' => __('Select main content and sidebar alignment', ''),",
+			"    'options'  => array(",
+			"        '1'      => array(",
+			"            'alt'   => '1 Column', ",
+			"            'img'   => ReduxFramework::$$_url.'assets/img/1col.png'",
+			"        ),",
+			"        '2'      => array(",
+			"            'alt'   => '2 Column Left', ",
+			"            'img'   => ReduxFramework::$$_url.'assets/img/2cl.png'",
+			"        ),",
+			"        '3'      => array(",
+			"            'alt'   => '2 Column Right', ",
+			"            'img'  => ReduxFramework::$$_url.'assets/img/2cr.png'",
+			"        ),",
+			"        '4'      => array(",
+			"            'alt'   => '3 Column Middle', ",
+			"            'img'   => ReduxFramework::$$_url.'assets/img/3cm.png'",
+			"        ),",
+			"        '5'      => array(",
+			"            'alt'   => '3 Column Left', ",
+			"            'img'   => ReduxFramework::$$_url.'assets/img/3cl.png'",
+			"        ),",
+			"        '6'      => array(",
+			"            'alt'  => '3 Column Right', ",
+			"            'img'  => ReduxFramework::$$_url.'assets/img/3cr.png'",
+			"        )",
+			"    ),",
+			"    'default' => '2'",
+			")"
+		],
+		"description": "Redux Field Image Select Layout"
+	},
+	"Redux Field Image Select Presets": {
+		"prefix": "reduxfisp",
+		"body": [
+			"array(",
+			"    'id'       => 'opt-presets',",
+			"    'type'     => 'image_select', ",
+			"    'presets'  => true,",
+			"    'title'    => __('Preset', 'redux-framework-demo'),",
+			"    'subtitle' => __('This allows you to set a json string or array to override', ''),",
+			"    'default'  => 0,",
+			"    'desc'     => __('This allows you to set a json string or array to override', ''),",
+			"    'options'  => array(",
+			"        // Array of preset options",
+			"        '1'      => array(",
+			"            'alt'   => 'Preset 1', ",
+			"            'img'   => ReduxFramework::$$_url.'../sample/presets/preset1.png', ",
+			"            'presets'   => array(",
+			"                'switch-on'     => 1,",
+			"                'switch-off'    => 1, ",
+			"                'switch-custom' => 1",
+			"            )",
+			"        ),",
+			"        // JSON string of preset options",
+			"        '2'       => array(",
+			"            'alt'     => 'Preset 2', ",
+			"            'img'     => ReduxFramework::$$_url.'../sample/presets/preset2.png', ",
+			"            'presets' => '{\"slider1\":\"1\", \"slider2\":\"0\", \"switch-on\":\"0\"}'",
+			"        ),",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Image Select Presets"
+	},
+	"Redux Field Divider": {
+		"prefix": "reduxfd",
+		"body": [
+			"array(",
+			"    'id'   =>'divider_1',",
+			"    'desc' => __('This is the description field', ''),",
+			"    'type' => 'divide'",
+			")"
+		],
+		"description": "Redux Field Divider"
+	},
+	"Redux Field Dimentions": {
+		"prefix": "reduxfdi",
+		"body": [
+			"array(",
+			"    'id'       => 'opt_dimensions',",
+			"    'type'     => 'dimensions',",
+			"    'units'    => array('em','px','%'),",
+			"    'title'    => __('Dimensions (Width/Height) Option', ''),",
+			"    'subtitle' => __('Allow your users to choose width, height, and/or unit.', ''),",
+			"    'desc'     => __('Enable or disable any piece of this field. Width, Height', ''),",
+			"    'default'  => array(",
+			"        'Width'   => '200', ",
+			"        'Height'  => '100'",
+			"    ),",
+			")"
+		],
+		"description": "Redux Field Dimentions"
+	},
