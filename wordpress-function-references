@@ -1,1 +1,18 @@
+"Wordpress Nav Menu": {
+  "prefix": "wpnav",
+  "body": [
+    "wp_nav_menu( array(",
+    "    'theme_location'  => '',",
+    "    'depth'           => ,",
+    "    'container'       => '',",
+    "    'container_class' => '',",
+    "    'container_id'    => '',",
+    "    'menu_class'      => '',",
+    "    'menu_id'         => '',",
+    "    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',",
+    "    'walker'          => new WP_Bootstrap_Navwalker(),",
+    ") );"
+  ],
+  "description": "Wordpress Nav Menu"
+},
 
