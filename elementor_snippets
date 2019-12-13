@@ -1,1 +1,68 @@
+"Elementor UI Heading": {
+  "prefix": "euiheading",
+  "body": [
+    "$$this->add_control(",
+    "	'more_options',",
+    "	[",
+    "		'label'       => __( 'Additional Options', 'plugin_name' ),",
+    "		'type'        => \\Elementor\\Controls_Manager::HEADING,",
+    "		'description' => __('Description Here','plugin_name'),",
+    "		'show_label'  => false,",
+    "		'label_block' => false,",
+    "		'separator'   => 'before',",
+    "	]",
+    ");"
+  ],
+  "description": "Elementor UI Heading"
+},
+
+"Elementor UI Divider": {
+		"prefix": "euidivider",
+		"body": [
+			"$$this->add_control(",
+		  "	'hr',",
+		  "	[",
+		  "	  'type' => \\Elementor\\Controls_Manager::DIVIDER,",
+		  "		'separator' => $1,",
+		  "	]",
+			");"
+		],
+		"description": "Elementor UI Divider"
+	},
+  
+  "Elementor UI Raw Html": {
+  "prefix": "euirowhtml",
+  "body": [
+    "$$this->add_control(",
+    "	'important_note',",
+    "	[",
+    "		'label' => __( 'Important Note', 'plugin-name' ),",
+    "		'type'  => \\Elementor\\Controls_Manager::RAW_HTML,",
+    "		'raw'   => __( 'A very important message to show in the panel.', 'plugin-name' ),",
+    "		'content_classes' => 'your_class',",
+    "	]",
+    ");"
+  ],
+  "description": "Elementor UI Raw Html"
+},
+
+"Elementor UI Button": {
+  "prefix": "euibutton",
+  "body": [
+    "$$this->add_control(",
+    "	'delete_content',",
+    "	[",
+    "		'label' => __( 'Delete Content', 'plugin-name' ),",
+    "		'type' => \\Elementor\\Controls_Manager::BUTTON,",
+    "		'separator' => 'before',",
+    "		'button_type' => 'success',",
+    "		'text' => __( 'Delete', 'plugin-domain' ),",
+    "		'event' => 'namespace:editor:delete',",
+    "	]",
+    ");"
+  ],
+  "description": "Elementor UI Button"
+}
+
+
 
