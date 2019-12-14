@@ -62,7 +62,56 @@
     ");"
   ],
   "description": "Elementor UI Button"
+},
+
+"Elementor Unit Control Slider": {
+  "prefix": "eslider",
+  "body": [
+    "$this->add_control(",
+    "	'width',",
+    "	[",
+    "		'label' => __( 'Width', 'plugin-domain' ),",
+    "		'type' => \\Elementor\\Controls_Manager::SLIDER,",
+    "		'size_units' => [ 'px', '%' ],",
+    "		'range' => [",
+    "			'px' => [",
+    "				'min' => 0,",
+    "				'max' => 1000,",
+    "				'step' => 5,",
+    "			],",
+    "			'%' => [",
+    "				'min' => 0,",
+    "				'max' => 100,",
+    "			],",
+    "		],",
+    "		'default' => [",
+    "			'unit' => '%',",
+    "			'size' => 50,",
+    "		],",
+    "		'selectors' => [",
+    "			'{{WRAPPER}} .box' => 'width: {{SIZE}}{{UNIT}};',",
+    "		],",
+    "	]",
+    ");"
+  ],
+  "description": "Elementor Unit Control Slider"
+},
+
+"Elementor Unit Control Dimentions": {
+  "prefix": "edimentions",
+  "body": [
+    "$$this->add_control(",
+    "	'margin',",
+    "	[",
+    "		'label' => __( 'Margin', 'plugin-domain' ),",
+    "		'type' => \\Elementor\\Controls_Manager::DIMENSIONS,",
+    "		'size_units' => [ 'px', '%', 'em' ],",
+    "		'selectors' => [",
+    "			'{{WRAPPER}} .your-class' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',",
+    "		],",
+    "	]",
+    ");"
+  ],
+  "description": "Elementor Unit Control Dimentions"
 }
-
-
 
