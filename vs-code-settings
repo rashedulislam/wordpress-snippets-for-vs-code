@@ -1,0 +1,37 @@
+settings: 1
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorCustomizations": {
+    "sideBar.background": "#282c34",
+    "tab.inactiveBackground": "#282c34",
+    "dropdown.background": "#282c34",
+    "editorGroupHeader.tabsBackground": "#282c34",
+  },
+  "workbench.colorTheme": "One Monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "php.validate.executablePath": "/opt/lampp/bin/php",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "Victor Mono", //Victor Mono  Fira Code
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
+  "editor.fontSize": 22,
+  "editor.renderIndentGuides": false,
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": false,
+  "window.zoomLevel": -1,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "window.menuBarVisibility": "default",
+  "window.titleBarStyle": "custom",
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "none",
+  "explorer.openEditors.visible": 0
+}
