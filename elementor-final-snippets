@@ -249,13 +249,7 @@ alias ep="epdir && epfile"
     ],
     "description": "Elementor widget structure"
   },
-"PHP Settings Display": {
-  "prefix": "ps",
-  "body": [
-    "<?php echo $$settings['field_name'] ; ?>"
-  ],
-  "description": "PHP Settings Display"
-},
+  
 "Php inline settings": {
   "prefix": "pis",
   "body": [
@@ -264,6 +258,7 @@ alias ep="epdir && epfile"
   ],
   "description": "Php inline settings"
 },
+
 "Php inline render": {
   "prefix": "pir",
   "body": [
@@ -271,25 +266,52 @@ alias ep="epdir && epfile"
   ],
   "description": "Php inline render"
 },
-  "PHP loop start": {
-    "prefix": "pls",
-    "body": [
-      "<?php ",
-      "  if($$settings['list_name']):",
-      "   foreach ( $$settings['list_name'] as $$index => $$item ) :",
-      "    $$field_name = $$this->get_repeater_setting_key( 'field_name', 'list_name', $$index );",
-      "    $$this->add_inline_editing_attributes( $$field_name, 'basic' );",
-      "?>"
-    ],
-    "description": "PHP loop start"
-  },
-  "PHP loop end": {
-    "prefix": "ple",
-    "body": [
-      "<?php  endforeach; endif; ?>"
-    ],
-    "description": "PHP loop end"
-  },
+
+"PHP Settings Display": {
+  "prefix": "ps",
+  "body": [
+    "<?php echo $$settings['field_name'] ; ?>"
+  ],
+  "description": "PHP Settings Display"
+},
+
+"PHP loop start": {
+  "prefix": "pls",
+  "body": [
+  "<?php ",
+  "  if($$settings['list_name']):",
+  "   foreach ( $$settings['list_name'] as $$index => $$item ) :",
+  "    $$field_name = $$this->get_repeater_setting_key( 'field_name', 'list_name', $$index );",
+  "    $$this->add_inline_editing_attributes( $$field_name, 'basic' );",
+  "?>"
+  ],
+  "description": "PHP loop start"
+},
+
+"PHP loop end": {
+  "prefix": "ple",
+  "body": [
+  "<?php  endforeach; endif; ?>"
+  ],
+  "description": "PHP loop end"
+},
+
+"Php inline render loop": {
+  "prefix": "pirl",
+  "body": [
+  "<?php echo $$this->get_render_attribute_string( $$field_name ); ?>"
+  ],
+  "description": "Php inline render loop"
+},
+
+"PHP Settings loop": {
+  "prefix": "psl",
+  "body": [
+  "<?php echo $$item['field_name'] ; ?>"
+  ],
+  "description": "PHP Settings loop"
+},
+
 "JS inline settings": {
   "prefix": "jis",
   "body": [
@@ -299,4 +321,58 @@ alias ep="epdir && epfile"
     "#>"
   ],
   "description": "JS inline settings"
+},
+"Javascript inline render": {
+  "prefix": "jir",
+  "body": [
+    "{{{ view.getRenderAttributeString( 'field_name' ) }}}"
+  ],
+  "description": "Javascript inline render"
+},
+
+"Javascript settings": {
+  "prefix": "js",
+  "body": [
+    "{{{ settings.field_name }}}"
+  ],
+  "description": "Javascript settings"
+},
+
+  "Javascript loop start": {
+    "prefix": "jls",
+    "body": [
+      "<#",
+      "  if ( settings.list_name ) {",
+      "      _.each( settings.list_name, function( item, index ) {	",
+      "      var field_name = view.getRepeaterSettingKey( 'field_name', 'list_name', index );",
+      "      view.addInlineEditingAttributes( field_name, 'basic' );",
+      "#>"
+    ],
+    "description": "Javascript loop start"
+  },
+  
+  "Javascript loop end": {
+    "prefix": "jle",
+    "body": [
+      "<#",
+      "    } );} ",
+      "#>"
+    ],
+    "description": "Javascript loop end"
+  },
+  
+"Javascript inline render loop": {
+  "prefix": "jirl",
+  "body": [
+    "{{{ view.getRenderAttributeString( field_name ) }}}"
+  ],
+  "description": "Javascript inline render loop"
+},
+ 
+"Javascript settings loop": {
+  "prefix": "jsl",
+  "body": [
+    "{{{ item.field_name }}}"
+  ],
+  "description": "Javascript settings loop"
 },
